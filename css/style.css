@@ -32,6 +32,25 @@ body {
     padding: 1.1em;
 }
 
+.overlay {
+    position: absolute;
+    bottom: 0;
+    left: 100%;
+    right: 0;
+    overflow: hidden;
+    width: 0;
+    height: 100%;
+    transition: 1s;
+    z-index: -1;
+}
+
+.login:hover .overlay {
+    left: 0;
+    width: 100%;
+    border-left: 2px solid rgba(223, 222, 222, 0.615);
+    border-radius: 0 0 2.1em 2.1em;
+}
+
 .login a {
     text-decoration: none;
     color: white;
@@ -79,6 +98,13 @@ body {
     border-radius: 0.5em;
     transform: scale(1.1);
     transition: all 0.5s;
+}
+
+.menu:hover .overlay {
+    left: 0;
+    width: 100%;
+    border-left: 2px solid rgb(223, 222, 222);
+    border-radius: 0.5em;
 }
 
 .menu:hover>ul {
