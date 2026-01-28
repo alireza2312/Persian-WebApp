@@ -16,33 +16,39 @@ body {
 }
 
 .home {
-    padding: 0.4em;
+    display: inline-block;
+    position: relative;
+    margin: 0.5em;
     font-size: 1.5em;
 }
 
-.overlay {
+.overlayh {
     position: absolute;
-    bottom: 0;
-    left: 100%;
+    top: 0;
+    bottom: 100%;
     right: 0;
+    left: 100%;
     overflow: hidden;
     width: 0;
-    height: 100%;
+    height: 0;
     transition: 1s;
     z-index: -1;
 }
 
-/* .home:hover .overlay {
+.home:hover .overlayh {
+    bottom: 0;
     left: 0;
-    width: 50%;
-    border-left: 2px solid rgba(223, 222, 222, 0.615);
+    width: 100%;
+    height: 100%;
+    border-bottom: 2px solid rgba(248, 69, 69, 0.715);
+    border-left: 2px solid rgb(248, 69, 69, 0.715);
     border-radius: 0.5em;
-} */
+}
 
 .home a {
     color: rgb(255, 255, 255);
     text-decoration: none;
-    padding: 0.2em;
+    padding: 0 0.2em;
 }
 
 .home a:hover {
@@ -100,24 +106,38 @@ body {
 }
 
 .login button {
+    display: inline-block;
     position: relative;
     background-color: rgb(0, 132, 255);
     width: 100%;
     border: none;
     border-radius: 0.5em;
     padding: 0.5em;
-    margin: 1.8em 0;
+    margin: 1em 0;
 }
 
 .login button:hover {
     background-color: #0245ff;
 }
 
-.login button:hover .overlay {
-    left: 0;
-    width: 100%;
-    border-left: 2px solid rgba(255, 0, 0, 0.615);
-    border-radius: 0.5em;
+.forget button {
+    position: relative;
+    width: fit-content;
+    font-size: 0.6em;
+    background-color: white;
+}
+
+.forget a {
+    font-size: 1.1em;
+    color: black;
+}
+
+.forget button:hover {
+    background-color: black;
+}
+
+.forget button:hover a {
+    color: white;
 }
 
 .change button {
@@ -137,38 +157,6 @@ body {
     background-color: rgb(15, 151, 0);
 }
 
-.change button:hover .overlay {
-    left: 0;
-    width: 100%;
-    border-left: 2px solid rgba(223, 222, 222, 0.615);
-    border-radius: 0.5em;
-}
-
-.forget {
-    position: relative;
-    margin: 0.5em 0;
-    font-size: 0.6em;
-}
-
-.forget:hover .overlay {
-    left: 0;
-    width: 100%;
-    border-left: 2px solid rgba(223, 222, 222, 0.615);
-    border-radius: 0.5em;
-}
-
-.forget a {
-    background-color: rgb(255, 255, 255);
-    color: rgb(0, 0, 0);
-    padding: 0.5em;
-    border-radius: 0.5em;
-}
-
-.forget a:hover {
-    color: white;
-    background-color: rgb(0, 0, 0);
-}
-
 .forget1 button {
     width: 49%;
     margin: 1.5em 0 0 0;
@@ -181,4 +169,23 @@ body {
 
 .forget1 button+button:hover {
     background-color: rgba(0, 0, 0, 0.538);
+}
+
+.overlayb {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 100%;
+    overflow: hidden;
+    width: 0;
+    height: 100%;
+    transition: 1s;
+    /* z-index: -1; */
+}
+
+.login button:hover .overlayb {
+    right: 0;
+    width: 100%;
+    border-right: 2px solid rgba(228, 228, 228, 0.786);
+    border-radius: 0.5em;
 }
